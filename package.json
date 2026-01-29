@@ -1,0 +1,51 @@
+{
+  "name": "backend-node-template",
+  "version": "1.0.0",
+  "description": "Template para projetos em node com express e typescript",
+  "keywords": [
+    "node",
+    "template",
+    "typescript"
+  ],
+  "homepage": "https://github.com/ricardoalves-dev/backend-node-template#readme",
+  "bugs": {
+    "url": "https://github.com/ricardoalves-dev/backend-node-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardoalves-dev/backend-node-template.git"
+  },
+  "license": "MIT",
+  "author": "Ricardo José Alves",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "husky",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint",
+    "dev": "npx tsx watch ./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.7.5",
+    "gts": "^7.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^5.2.1",
+    "gts": "^7.0.0",
+    "helmet": "^8.1.0"
+  },
+  "lint-staged": {
+    "*.{ts,js}": "gts fix"
+  }
+}
