@@ -14,20 +14,13 @@ export class ExpressServer {
   private readonly routes: ExpressServerRoutes[];
   private readonly logger?: Logger;
 
-  constructor(
-    {
-      preMiddlewares,
-      postMiddlewares,
-      handlers,
-      routes,
-      logger,
-    }: ExpressServerConfig,
-    // private readonly preMiddlewares: RequestHandler[],
-    // private readonly postMiddlewares: RequestHandler[],
-    // private readonly handlers: ErrorRequestHandler[],
-    // private readonly routes: ExpressServerRoutes[],
-    // private readonly logger?: Logger
-  ) {
+  constructor({
+    preMiddlewares,
+    postMiddlewares,
+    handlers,
+    routes,
+    logger,
+  }: ExpressServerConfig) {
     this.expressApp = express();
     this.preMiddlewares = preMiddlewares;
     this.postMiddlewares = postMiddlewares;
